@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="sk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Salón Natalia Kashyk</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Crimson+Pro:wght@300;400;500;600&family=Lato:wght@300;400;700&family=Nunito+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+    <!-- GSAP scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+
+    <!-- Lenis Smooth Scrolling -->
+    <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.19/bundled/lenis.min.js"></script>
+
+    <!-- jQuery and Ripples for water effect -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery.ripples@0.6.3/dist/jquery.ripples.min.js"></script>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <h3>Salón Natalia Kashyk</h3>
+            </div>
+            <div class="nav-menu">
+                <a href="#about" class="nav-link">O nás</a>
+                <a href="#services" class="nav-link">Služby</a>
+                <a href="#contact" class="nav-link">Kontakt</a>
+                <a href="#contact" class="nav-link btn-nav">Rezervácia</a>
+            </div>
+            <div class="mobile-menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu">
+        <a href="#about" class="nav-link">O nás</a>
+        <a href="#services" class="nav-link">Služby</a>
+        <a href="#contact" class="nav-link">Kontakt</a>
+        <a href="#contact" class="nav-link">Rezervácia</a>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero" id="banner">
+        <div class="hero-background" style="background-image: url('https://images.unsplash.com/photo-1540555700478-4be289fbecef?w=1600&q=80');">
+        </div>
+        <div class="hero-overlay"></div>
+
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1 class="hero-title">Salón Natalia Kashyk</h1>
+                <p class="hero-subtitle">Objavte svoje najkrajšie ja v našom špičkovom salóne – profesionálne služby, kvalifikovaní odborníci a luxusná starostlivosť na jednom mieste.</p>
+            </div>
+            <div class="hero-buttons">
+                <a href="#contact" class="btn btn-primary cta-btn">Rezervácia</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-image">
+                    <img src="moj-pribeh.jpg" alt="Môj príbeh - Nataliya">
+                </div>
+                <div class="about-text">
+                    <h2>Môj príbeh</h2>
+                    <p>Vitajte v našom salóne krásy. Volám sa Nataliya, som kozmetička s viac ako 10 ročnou praxou. Naozaj milujem svoju prácu a komunikáciu s klientmi. Viem, ako urobiť Vašu pokožku mladú a zdravú.</p>
+                    <p>Rada Vám bezplatne poradím s mojimi službami a stavom Vašej pleti. Teším sa na Vás v mojom Salóne, ktorý sa nachádza v úplnom centre Bratislavy.</p>
+                    <div class="about-buttons">
+                        <a href="#contact" class="btn btn-dark">Rezervácia</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Us Section -->
+    <section class="why-us section-padding" style="background-color: #f9f9f9;">
+        <div class="container">
+            <div class="about-content" style="flex-direction: row-reverse;">
+                <div class="about-image">
+                    <img src="preco-prave-my.jpeg" alt="Prečo práve my?">
+                </div>
+                <div class="about-text">
+                    <h2>Prečo práve my?</h2>
+                    <p>V Beauty Salóne Natalia Kashyk veríme v krásu, ktorá prichádza z prírody a je podporená odbornou starostlivosťou. Naše služby sú navrhnuté tak, aby vám poskytli to najlepšie z oboch svetov – prírodných produktov a profesionálneho prístupu.</p>
+                    <ul style="list-style: none; padding: 0; margin-top: 20px;">
+                        <li style="margin-bottom: 10px;">✓ Prírodné produkty</li>
+                        <li style="margin-bottom: 10px;">✓ Profesionalita</li>
+                        <li style="margin-bottom: 10px;">✓ Špeciálne ponuky</li>
+                        <li style="margin-bottom: 10px;">✓ Konzultácie</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services" id="services">
+        <div class="container">
+            <div class="services-header">
+                <div class="services-text">
+                    <h2>Naše služby</h2>
+                    <p>Ponúkam všetky druhy ošetrovacích procedúr: čistenie tváre, chemický peeling, masáž tváre, krku, dekoltu, procedúru PRX-T33, mikroprúdovú terapiu, karboxyterapiu, farbenie obočia a mihalníc, laminovanie mihalníc, ako aj depiláciu celého tela voskom.</p>
+                </div>
+            </div>
+            <div class="services-grid" style="grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));">
+                <!-- Service 1 -->
+                <div class="service-card">
+                    <div class="service-background">
+                        <img src="cistenietvare.jpg" alt="Čistenie tváre">
+                    </div>
+                    <div class="service-overlay"></div>
+                    <div class="service-content">
+                        <h3>Čistenie tváre</h3>
+                        <p>Hĺbkové čistenie tváre odstráni nečistoty a zanechá pleť sviežu a žiarivú.</p>
+                    </div>
+                </div>
+                <!-- Service 2 -->
+                <div class="service-card">
+                    <div class="service-background">
+                        <img src="chemickypealing.jpg" alt="Chemický peeling">
+                    </div>
+                    <div class="service-overlay"></div>
+                    <div class="service-content">
+                        <h3>Chemický peeling</h3>
+                        <p>Chemický peeling obnovuje pleť odstránením odumretých buniek a podporuje regeneráciu pokožky.</p>
+                    </div>
+                </div>
+                <!-- Service 3 -->
+                <div class="service-card">
+                    <div class="service-background">
+                        <img src="masaztvare.jpg" alt="Masáž tváre">
+                    </div>
+                    <div class="service-overlay"></div>
+                    <div class="service-content">
+                        <h3>Masáž tváre</h3>
+                        <p>Relaxačná masáž tváre uvoľňuje napätie a zlepšuje krvný obeh v pokožke.</p>
+                    </div>
+                </div>
+                <!-- Service 4 -->
+                <div class="service-card">
+                    <div class="service-background">
+                        <img src="prx33.jpg" alt="Procedúra PRX-T33">
+                    </div>
+                    <div class="service-overlay"></div>
+                    <div class="service-content">
+                        <h3>Procedúra PRX-T33</h3>
+                        <p>Inovatívna procedúra PRX-T33 zlepšuje textúru a pevnosť pleti bez použitia ihiel.</p>
+                    </div>
+                </div>
+                <!-- Service 5 -->
+                <div class="service-card">
+                    <div class="service-background">
+                        <img src="karboxyterapia.jpg" alt="Karboxyterapia">
+                    </div>
+                    <div class="service-overlay"></div>
+                    <div class="service-content">
+                        <h3>Karboxyterapia</h3>
+                        <p>Karboxyterapia zlepšuje vzhľad pokožky pomocou aplikácie oxidu uhličitého.</p>
+                    </div>
+                </div>
+                <!-- Service 6 -->
+                <div class="service-card">
+                    <div class="service-background">
+                        <img src="mikropudrova-terapia.jpeg" alt="Mikroprúdová terapia">
+                    </div>
+                    <div class="service-overlay"></div>
+                    <div class="service-content">
+                        <h3>Mikroprúdová terapia</h3>
+                        <p>Mikroprúdová terapia využíva jemné elektrické impulzy na spevnenie a omladenie pleti.</p>
+                    </div>
+                </div>
+                <!-- Service 7 -->
+                <div class="service-card">
+                    <div class="service-background">
+                        <img src="depilacia-voskom.jpg" alt="Depilácia voskom">
+                    </div>
+                    <div class="service-overlay"></div>
+                    <div class="service-content">
+                        <h3>Depilácia voskom</h3>
+                        <p>Depilácia voskom je účinná metóda odstránenia nežiaducich chĺpkov, ktorá zanecháva pokožku hladkú a jemnú až na niekoľko týždňov.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="services-cta" style="text-align: center; margin-top: 50px;">
+                <h3>Chcem termín</h3>
+                <p>Pre rezerváciu si prosím zarezervujte termín cez tlačídlo nižšie</p>
+                <a href="#contact" class="btn btn-primary" style="margin-top: 20px;">Rezervácia</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials section-padding" style="background-color: #fff; padding: 80px 0;">
+        <div class="container">
+            <div class="services-header">
+                <div class="services-text">
+                    <h2>Čo hovoria naši klienti?</h2>
+                </div>
+            </div>
+            <div class="testimonials-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px;">
+                <div class="testimonial-card" style="padding: 20px; background: #f9f9f9; border-radius: 8px;">
+                    <h4>Dominika D.</h4>
+                    <p>"Dakujem!"</p>
+                </div>
+                <div class="testimonial-card" style="padding: 20px; background: #f9f9f9; border-radius: 8px;">
+                    <h4>Deanna P.</h4>
+                    <p>"Great job"</p>
+                </div>
+                <div class="testimonial-card" style="padding: 20px; background: #f9f9f9; border-radius: 8px;">
+                    <h4>Zuzana</h4>
+                    <p>"Super!! Excellent beautician. I don’t speak Slovak but Natalia could speak to me in English. She was very kind and friendly."</p>
+                </div>
+                <div class="testimonial-card" style="padding: 20px; background: #f9f9f9; border-radius: 8px;">
+                    <h4>Janet H.</h4>
+                    <p>"Ďakujem, Natalia. PRX je úžasná procedúra. Som veľmi spokojna"</p>
+                </div>
+                <div class="testimonial-card" style="padding: 20px; background: #f9f9f9; border-radius: 8px;">
+                    <h4>Ютта К.</h4>
+                    <p>"Great as usual"</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq section-padding" style="background-color: #f5f5f5; padding: 80px 0;">
+        <div class="container">
+            <div class="services-header">
+                <div class="services-text">
+                    <h2>Často kladené otázky</h2>
+                </div>
+            </div>
+            <div class="faq-list" style="max-width: 800px; margin: 0 auto;">
+                <div class="faq-item" style="margin-bottom: 20px;">
+                    <h4 style="margin-bottom: 10px;">Môžem si rezervovať konzultáciu pred procedúrou?</h4>
+                </div>
+                <div class="faq-item" style="margin-bottom: 20px;">
+                    <h4 style="margin-bottom: 10px;">Ako funguje rezervácia termínu?</h4>
+                </div>
+                <div class="faq-item" style="margin-bottom: 20px;">
+                    <h4 style="margin-bottom: 10px;">Aké produkty používate pri svojich procedúrach?</h4>
+                </div>
+                <div class="faq-item" style="margin-bottom: 20px;">
+                    <h4 style="margin-bottom: 10px;">Čo mám robiť, ak meškám na svoj termín?</h4>
+                </div>
+            </div>
+            <div class="faq-cta" style="text-align: center; margin-top: 40px; padding: 30px; background: #fff; border-radius: 8px;">
+                <h3>Rezervácia vopred</h3>
+                <p>Odporúčame sa rezervovať čo najskôr, z dôvodu vysokého záujmu</p>
+                <a href="#contact" class="btn btn-primary" style="margin-top: 20px;">Rezervácia</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="location" id="contact">
+        <div class="container">
+            <div class="location-content">
+                <div class="location-info">
+                    <div class="location-item">
+                        <h4>Kontakt</h4>
+                        <h3 style="color: var(--peach); margin-bottom: 0.5rem;">Nataliya Kashyk</h3>
+                        <p><a href="tel:0940235635">0940 235 635</a></p>
+                        <p><a href="mailto:kashyknatalya@gmail.com">kashyknatalya@gmail.com</a></p>
+                    </div>
+                    <div class="location-item">
+                        <h4>Adresa</h4>
+                        <p>Podchod Hodžovo námestie 4,<br>Bratislava</p>
+                    </div>
+                    <div class="location-item">
+                        <h4>Otváracie hodiny</h4>
+                        <p>Po - Pia: 9:00 - 19:00</p>
+                        <p>So: 9:00 - 15:00</p>
+                        <p>Ne: Zatvorené</p>
+                    </div>
+                </div>
+                <div class="map">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2662.0000000000005!2d17.100000000000005!3d48.150000000000006!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x476c890000000000%3A0x0!2sHod%C5%BEovo%20n%C3%A1mestie!5e0!3m2!1sen!2ssk!4v1600000000000!5m2!1sen!2ssk" 
+                            width="100%" 
+                            height="100%" 
+                            style="border:0;" 
+                            allowfullscreen="" 
+                            loading="lazy">
+                    </iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-top">
+                <div class="footer-main">
+                    <h3>Salón Natalia Kashyk</h3>
+                    <p>Váš priestor pre krásu a relax</p>
+                </div>
+                <div class="footer-contact">
+                    <h5><a href="tel:0940235635">0940 235 635</a></h5>
+                    <p><a href="mailto:kashyknatalya@gmail.com">kashyknatalya@gmail.com</a></p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="footer-copyright">
+                    <p>Copyright Natalia Kashyk 2024</p>
+                    <p><a href="ochrana-osobnych-udajov.html" style="color: var(--peach); text-decoration: none; margin-right: 10px;">Ochrana osobných údajov</a> | <a href="https://aebdigital.sk" target="_blank">Tvorba stránky – AEB Digital</a></p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="gsap-animations.js"></script>
+
+    <!-- Initialize Ripples effect on hero -->
+    <script>
+        $(document).ready(function() {
+            try {
+                $('.hero-background').ripples({
+                    resolution: 512,
+                    dropRadius: 30,
+                    perturbance: 0.08,
+                    interactive: true,
+                    crossOrigin: '',
+                    dampening: 0.05
+                });
+            } catch(e) {
+                console.log('Ripples effect not supported:', e);
+            }
+        });
+    </script>
+</body>
+</html>
